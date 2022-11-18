@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity #6</title>
+    <script>
+        function changeContent() {
+            var paragraphList = document.getElementsByTagName("p");
+            var paragraphNumContent = document.getElementById("paragraphNumContent").value-1;
+            var paragraphContent = document.getElementById("paragraphContent").value;
+            paragraphList[paragraphNumContent].innerHTML = paragraphContent;    
+        }
+        function changeColor() {
+            var paragraphList = document.getElementsByTagName("p");
+            var paragraphNumColor = document.getElementById("paragraphNumColor").value-1;
+            var paragraphColor = document.getElementById("paragraphColor").value;
+            paragraphList[paragraphNumColor].style.color = paragraphColor;
+        }
+    </script>
+</head>
+<body>  
+    <h1>Edit the paragraphs!</h1>
+    <div>
+        <input type="number" id="paragraphNumContent" placeholder="paragraph #">
+        <input type="text" id="paragraphContent" placeholder="content">
+        <input type="button" onClick="changeContent()" value="click me">
+    </div>
+    <div>
+        <input type="number" id="paragraphNumColor" placeholder="paragraph #">
+        <input type="color" id="paragraphColor" value="#FF0000">
+        <input type="button" onClick="changeColor()" value="click me">
+    </div><br><br>
+    <div>
+        <b>#1</b><p>By total area, Canada is the world’s second largest country. Only Russia is larger.</p>
+        <b>#2</b><p>The odds of giving birth to a baby at 12:01 a.m. on January 1 are around 1 in 526,000—roughly the same as the odds of getting struck by lightning.</p>
+        <b>#3</b><p>When Texas was its own sovereign nation in the mid-1800s, it briefly had a diplomatic mission in Paris.</p>
+        <b>#4</b><p>A British man changed his name to Tim Pppppppppprice to make it harder for telemarketers to pronounce.</p>
+        <b>#5</b><p>The corpse flower was the official flower of the Bronx for 60 years.</p>
+    </div>
+</body>
+</html>
