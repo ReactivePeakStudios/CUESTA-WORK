@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Extra Credit Chapter 2</title>
+        <script>
+            function salesTax() {
+                state = document.getElementById("state").value.toLowerCase();
+                if(state == "ca" || state == "california") {
+                    alert("Sales tax will be charged");
+                } else {
+                    alert("Sales tax will not be charged");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input id="state" type="text" placeholder="State">
+        <input type="button" onclick="salesTax();" value="Check for Sales Tax">
+    </body>
+</html>

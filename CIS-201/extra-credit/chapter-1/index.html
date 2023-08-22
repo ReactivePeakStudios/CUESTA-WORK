@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Name and Age</title>
+        <script>
+ 
+            function getArea() {
+                let length = parseInt(document.getElementById('length').value);
+                let width = parseInt(document.getElementById('width').value);
+                let depth = parseInt(document.getElementById('depth').value);
+                
+                let output = length * width * depth;
+
+                document.getElementById('output').innerHTML = ` the area is ${output} inches cubed`;
+            }
+ 
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="number" id="length" placeholder="length (in.)">
+            <input type="number" id="width" placeholder="width (in.)">
+            <input type="number" id="depth" placeholder="depth (in.)">
+        </div>
+        <div>
+            <button type="submit" onClick="getArea();" >Find the area</button>
+            <p id="output"></p>
+        </div>
+    </body>
+</html>

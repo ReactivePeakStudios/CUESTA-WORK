@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Activity #4</title>
+        <script>
+            scoreArray = [];
+            logicSize = 0;
+            
+            function addScores() {
+
+                const scoreAmount = parseInt(prompt("Please enter the amount of scores you would like to add:"));
+                
+                for(i=1; i<=scoreAmount; i++) {
+
+                    const score = prompt(`There are currently ${logicSize} scores. Please enter score #${logicSize+1}:`)
+                    scoreArray[logicSize] = score;
+                    ++logicSize;
+                }
+
+                alert(scoreArray);
+                document.getElementById('currentScore').innerHTML = logicSize;
+                document.getElementById('scoresStored').innerHTML = scoreArray.join(', ');;
+            }
+
+            function getAverage() {
+
+                scoreAverage = 0;
+
+                for(i=1; i<=logicSize; i++) {
+                    scoreAverage += parseInt(scoreArray[i-1]);
+                    alert(scoreAverage);
+                }
+                document.getElementById('averageScore').innerHTML = (scoreAverage / logicSize).toFixed(3);
+            }
+            
+        </script>
+    </head>
+    <body>
+        <button onCLick="addScores()">Add Scores</button>
+        <button onCLick="getAverage()">Get Average Scores</button>
+        <p>Current Scores: <span id="currentScore">0</span></p>
+        <p>Scores Stored: <span id="scoresStored">none</span></p>
+        <p>Average Score: <span id="averageScore">0</span></p>
+    </body>
+</html>

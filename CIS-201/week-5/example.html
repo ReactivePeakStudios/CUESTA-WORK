@@ -1,0 +1,39 @@
+<html>
+    <head>
+    <title>In Class Loop Example #1</title>
+    <script>
+        function annoyUser() {
+            let x=0;
+            while (x<10) {
+                window.alert("Annoying Message Number " + x)
+                x++;
+            }
+        }
+
+        function annoyUserAgain() {
+            for (let x=1; x<=10; x++) {
+                window.alert("Annoying Message Number " + x)
+            }
+        }
+
+        function buildResult() {
+            let x=0;   
+            let result=" ";
+            while (x<5) {
+                result+= window.prompt("Enter a word: ");
+                x++;
+            }
+            document.getElementById("answer").innerHTML = result;
+        }
+
+    </script>
+    </head>
+    <body>
+        <form id="myForm">
+            <input type="button" value="DONT CLICK ME" onclick="annoyUser()">
+            <input type="button" value="REALLY, DONT CLICK ME" onclick="annoyUserAgain()">
+            <input type="button" value="I'M BEGGING YOU GOD PLEASE IT HURTS" onclick="buildResult()">
+            <p id="answer"></p>
+        </form>
+    </body>
+</html>  

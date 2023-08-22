@@ -1,0 +1,59 @@
+html {
+    background-color: #7a6850;
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+body {
+    color: #caab66;
+    padding:1em;
+}
+
+table {
+    border: 4px solid #cbdf97;
+    color: #FFFFFF;
+}
+td {
+    background-color: #56452f;
+    padding: 0.4em;
+}
+
+.price {
+    color: #cbdf97;
+    font-weight: 400;
+}
+
+#lightImage {
+    width: 300px;
+    float: right;
+    border: 2px solid #FFFFFF;
+}
+
+#pageTitle {
+    font-size: 50px;
+    color:#FFFFFF;
+}
+
+#headContainer {
+    display:flex;
+}
+
+#headDiv {
+    width:70%;
+}
+#imgDiv {
+    width:30%;
+}
+
+.category {
+    background-color: #3b3022;
+    padding: 0.5em;
+    text-align: left;
+}
+.tableHeader {
+    background-color: #4a3b29;
+    padding: 0.5em;
+}
+.tableTitle {
+    background-color: #56452f;
+    padding: 0.7em;
+}

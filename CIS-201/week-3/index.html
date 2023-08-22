@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Products Example</title>
+        <link rel="stylesheet" href="./styles/style.css">
+    </head>
+    <body>
+        <h1>Enter your data:</h1>
+        <>
+            <table>
+                <tr> <!--Name row for table-->
+                    <td>First Name:</td>
+                    <td> <input type="text" id="firstName"> </td>
+                    <td>+</td>
+                    <td>Last Name:</td>
+                    <td colspan="2"> <input type="text" id="lastName"> </td>
+                </tr> 
+                <tr> <!--Number row for table-->
+                    <td>First Number:</td>
+                    <td> <input type="text" id="firstNumber" value="5"> </td>
+                    <td>×</td>
+                    <td>Last Number:</td>
+                    <td> <input type="text" id="lNumber" value="3"> </td>
+                    <td> <button id="calculateProduct" onclick="findProduct()" >Find Product</button> </td>
+                </tr>
+            </table>
+            <p>Product: <span id="answer">15</span></p>
+        </form>
+    </body>
+</html>
