@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <style>
+            #container { display: flex; justify-content: center; align-items: center; width: 100%; height:100%; }
+            #input-wrapper div { display: block; padding: 1em; text-align: center; }
+        </style>
+        <script>
+            currentTrucks = []; //all existing trucks
+            currentTrucksLength = 0; //current
+            function truck(license, make, year) { // initialization of the truck object
+                this.license_plate = license;
+                this.make = make;
+                this.year_produced = year;
+            }
+            function submitTruck() {
+                let license = document.getElementById("license_plate").value;
+                let make = document.getElementById("make").value;
+                let year = document.getElementById("year_produced").value;
+                if (license != "" || make != "" || year != "") { //check if inputs are blank    
+                    var userCreatedTruck = new truck(license, make, year);
+                    currentTrucks[currentTrucksLength] = userCreatedTruck;
+                    currentTrucksLength++;
+                    alert(`saved new object: ${JSON.stringify(userCreatedTruck)}`);
+                } else {
+                    alert("Please enter license, make and year.");
+                }
+            }
+            function readObject() {
+                for (var i = 0; i < currentTrucksLength; i++) {
+                    alert(`
+                    License: ${currentTrucks[i].license_plate}
+                    Make:    ${currentTrucks[i].make}
+                    Year:    ${currentTrucks[i].year_produced}
+                    `);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="input-wrapper">
+                <div>
+                    <input type="text" id="license_plate" placeholder="license plate #" onkeyup="this.value = this.value.toUpperCase();">
+                    <input type="text" id="make" placeholder="make">
+                    <input type="number" id="year_produced" placeholder="year produced" min="1900" max="2023" step="1"/>
+                </div>
+                <div>
+                    <input type="button" value="Submit A Truck" onclick="submitTruck();">
+                    <input type="button" value="Display All Trucks" onclick="readObject();">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
